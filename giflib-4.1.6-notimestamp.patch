@@ -1,0 +1,364 @@
+diff -ruN giflib-4.1.6/lib/gif_lib_private.h giflib-4.1.6-notimestamps//lib/gif_lib_private.h
+--- giflib-4.1.6/lib/gif_lib_private.h	2005-10-10 09:22:22.000000000 +0300
++++ giflib-4.1.6-notimestamps//lib/gif_lib_private.h	2012-08-15 14:22:27.191675503 +0300
+@@ -11,8 +11,10 @@
+                     (C) Copyright 1997 Eric S. Raymond\n"
+ #else
+ #define VersionStr PROGRAM_NAME "    IBMPC " GIF_LIB_VERSION \
+-                    "    Eric S. Raymond,    " __DATE__ ",   " \
+-                    __TIME__ "\n" "(C) Copyright 1997 Eric S. Raymond\n"
++                    "    Eric S. Raymond,    " \
++                    "built in OBS, see rpm -q --info packagename for more \
++                     information\n" \
++                    "(C) Copyright 1997 Eric S. Raymond\n"
+ #endif /* SYSV */
+ 
+ #define LZ_MAX_CODE         4095    /* Biggest code possible in 12 bits. */
+diff -ruN giflib-4.1.6/util/gif2epsn.c giflib-4.1.6-notimestamps//util/gif2epsn.c
+--- giflib-4.1.6/util/gif2epsn.c	2007-11-10 20:46:31.000000000 +0200
++++ giflib-4.1.6-notimestamps//util/gif2epsn.c	2012-08-15 14:22:27.275717503 +0300
+@@ -83,7 +83,7 @@
+ 	PROGRAM_NAME
+ 	GIF_LIB_VERSION
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =
+diff -ruN giflib-4.1.6/util/gif2iris.c giflib-4.1.6-notimestamps//util/gif2iris.c
+--- giflib-4.1.6/util/gif2iris.c	2007-11-10 20:46:31.000000000 +0200
++++ giflib-4.1.6-notimestamps//util/gif2iris.c	2012-08-15 14:22:27.243701504 +0300
+@@ -59,7 +59,7 @@
+ 	PROGRAM_NAME
+ 	GIF_LIB_VERSION
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =
+diff -ruN giflib-4.1.6/util/gif2ps.c giflib-4.1.6-notimestamps//util/gif2ps.c
+--- giflib-4.1.6/util/gif2ps.c	2007-11-10 20:46:31.000000000 +0200
++++ giflib-4.1.6-notimestamps//util/gif2ps.c	2012-08-15 14:22:27.275717504 +0300
+@@ -71,7 +71,7 @@
+ 	PROGRAM_NAME
+ 	GIF_LIB_VERSION
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =
+diff -ruN giflib-4.1.6/util/gif2rgb.c giflib-4.1.6-notimestamps//util/gif2rgb.c
+--- giflib-4.1.6/util/gif2rgb.c	2007-11-10 20:46:31.000000000 +0200
++++ giflib-4.1.6-notimestamps//util/gif2rgb.c	2012-08-15 14:22:27.243701504 +0300
+@@ -58,7 +58,7 @@
+ 	PROGRAM_NAME
+ 	GIF_LIB_VERSION
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =
+diff -ruN giflib-4.1.6/util/gif2rle.c giflib-4.1.6-notimestamps//util/gif2rle.c
+--- giflib-4.1.6/util/gif2rle.c	2007-11-10 20:46:31.000000000 +0200
++++ giflib-4.1.6-notimestamps//util/gif2rle.c	2012-08-15 14:22:27.243701503 +0300
+@@ -56,7 +56,7 @@
+ 	PROGRAM_NAME
+ 	GIF_LIB_VERSION
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =
+diff -ruN giflib-4.1.6/util/gif2x11.c giflib-4.1.6-notimestamps//util/gif2x11.c
+--- giflib-4.1.6/util/gif2x11.c	2007-11-10 20:46:31.000000000 +0200
++++ giflib-4.1.6-notimestamps//util/gif2x11.c	2012-08-15 14:22:27.287723505 +0300
+@@ -68,7 +68,7 @@
+ 	PROGRAM_NAME
+ 	GIF_LIB_VERSION
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =
+diff -ruN giflib-4.1.6/util/gifasm.c giflib-4.1.6-notimestamps//util/gifasm.c
+--- giflib-4.1.6/util/gifasm.c	2005-10-10 09:22:23.000000000 +0300
++++ giflib-4.1.6-notimestamps//util/gifasm.c	2012-08-15 14:22:27.287723504 +0300
+@@ -57,7 +57,7 @@
+ 	PROGRAM_NAME
+ 	GIF_LIB_VERSION
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =
+diff -ruN giflib-4.1.6/util/gifbg.c giflib-4.1.6-notimestamps//util/gifbg.c
+--- giflib-4.1.6/util/gifbg.c	2005-10-10 09:22:23.000000000 +0300
++++ giflib-4.1.6-notimestamps//util/gifbg.c	2012-08-15 14:22:27.275717503 +0300
+@@ -80,7 +80,7 @@
+ 	PROGRAM_NAME
+ 	GIF_LIB_VERSION
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =
+diff -ruN giflib-4.1.6/util/gifclip.c giflib-4.1.6-notimestamps//util/gifclip.c
+--- giflib-4.1.6/util/gifclip.c	2005-10-10 09:22:23.000000000 +0300
++++ giflib-4.1.6-notimestamps//util/gifclip.c	2012-08-15 14:22:27.307733503 +0300
+@@ -52,7 +52,7 @@
+ 	PROGRAM_NAME
+ 	GIF_LIB_VERSION
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =
+diff -ruN giflib-4.1.6/util/gifclrmp.c giflib-4.1.6-notimestamps//util/gifclrmp.c
+--- giflib-4.1.6/util/gifclrmp.c	2005-10-10 09:22:23.000000000 +0300
++++ giflib-4.1.6-notimestamps//util/gifclrmp.c	2012-08-15 14:22:27.243701503 +0300
+@@ -60,7 +60,7 @@
+ 	PROGRAM_NAME
+ 	GIF_LIB_VERSION
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =
+diff -ruN giflib-4.1.6/util/gifcolor.c giflib-4.1.6-notimestamps//util/gifcolor.c
+--- giflib-4.1.6/util/gifcolor.c	2005-10-10 09:22:22.000000000 +0300
++++ giflib-4.1.6-notimestamps//util/gifcolor.c	2012-08-15 14:22:27.291725504 +0300
+@@ -54,7 +54,7 @@
+ 	PROGRAM_NAME
+ 	GIF_LIB_VERSION
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr = PROGRAM_NAME " q%- b%-Background!d h%-";
+diff -ruN giflib-4.1.6/util/gifcomb.c giflib-4.1.6-notimestamps//util/gifcomb.c
+--- giflib-4.1.6/util/gifcomb.c	2005-10-10 09:22:23.000000000 +0300
++++ giflib-4.1.6-notimestamps//util/gifcomb.c	2012-08-15 14:22:27.287723504 +0300
+@@ -53,7 +53,7 @@
+ 	PROGRAM_NAME
+ 	GIF_LIB_VERSION
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =
+diff -ruN giflib-4.1.6/util/giffix.c giflib-4.1.6-notimestamps//util/giffix.c
+--- giflib-4.1.6/util/giffix.c	2005-10-10 09:22:23.000000000 +0300
++++ giflib-4.1.6-notimestamps//util/giffix.c	2012-08-15 14:22:27.291725504 +0300
+@@ -50,7 +50,7 @@
+ 	PROGRAM_NAME
+ 	GIF_LIB_VERSION
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =
+diff -ruN giflib-4.1.6/util/gifflip.c giflib-4.1.6-notimestamps//util/gifflip.c
+--- giflib-4.1.6/util/gifflip.c	2005-10-10 09:22:23.000000000 +0300
++++ giflib-4.1.6-notimestamps//util/gifflip.c	2012-08-15 14:22:27.287723505 +0300
+@@ -60,7 +60,7 @@
+ 	PROGRAM_NAME
+ 	GIF_LIB_VERSION
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =
+diff -ruN giflib-4.1.6/util/gifhisto.c giflib-4.1.6-notimestamps//util/gifhisto.c
+--- giflib-4.1.6/util/gifhisto.c	2005-10-10 09:22:23.000000000 +0300
++++ giflib-4.1.6-notimestamps//util/gifhisto.c	2012-08-15 14:22:27.291725504 +0300
+@@ -60,7 +60,7 @@
+ 	PROGRAM_NAME
+ 	GIF_LIB_VERSION
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =
+diff -ruN giflib-4.1.6/util/gifinfo.c giflib-4.1.6-notimestamps//util/gifinfo.c
+--- giflib-4.1.6/util/gifinfo.c	2005-10-10 09:22:23.000000000 +0300
++++ giflib-4.1.6-notimestamps//util/gifinfo.c	2012-08-15 14:22:27.243701503 +0300
+@@ -62,7 +62,7 @@
+ 	PROGRAM_NAME
+ 	GIF_LIB_VERSION
+ 	"	Martin Edlman,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1999 Martin Edlman.\n";
+ static char
+     *CtrlStr =
+diff -ruN giflib-4.1.6/util/gifinter.c giflib-4.1.6-notimestamps//util/gifinter.c
+--- giflib-4.1.6/util/gifinter.c	2005-10-10 09:22:23.000000000 +0300
++++ giflib-4.1.6-notimestamps//util/gifinter.c	2012-08-15 14:22:27.243701503 +0300
+@@ -52,7 +52,7 @@
+ 	PROGRAM_NAME
+ 	GIF_LIB_VERSION
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =
+diff -ruN giflib-4.1.6/util/gifinto.c giflib-4.1.6-notimestamps//util/gifinto.c
+--- giflib-4.1.6/util/gifinto.c	2005-10-10 09:22:22.000000000 +0300
++++ giflib-4.1.6-notimestamps//util/gifinto.c	2012-08-15 14:22:27.295727504 +0300
+@@ -60,7 +60,7 @@
+ 	PROGRAM_NAME
+ 	GIF_LIB_VERSION
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =
+diff -ruN giflib-4.1.6/util/gifovly.c giflib-4.1.6-notimestamps//util/gifovly.c
+--- giflib-4.1.6/util/gifovly.c	2005-10-10 09:22:23.000000000 +0300
++++ giflib-4.1.6-notimestamps//util/gifovly.c	2012-08-15 14:22:27.339749506 +0300
+@@ -48,7 +48,7 @@
+ 	PROGRAM_NAME
+ 	GIF_LIB_VERSION
+ 	"	Eric Raymond,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1992 Eric Raymond.\n";
+ static char
+     *CtrlStr =
+diff -ruN giflib-4.1.6/util/gifpos.c giflib-4.1.6-notimestamps//util/gifpos.c
+--- giflib-4.1.6/util/gifpos.c	2005-10-10 09:22:23.000000000 +0300
++++ giflib-4.1.6-notimestamps//util/gifpos.c	2012-08-15 14:22:27.243701503 +0300
+@@ -50,7 +50,7 @@
+ 	PROGRAM_NAME
+ 	GIF_LIB_VERSION
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =
+diff -ruN giflib-4.1.6/util/gifrotat.c giflib-4.1.6-notimestamps//util/gifrotat.c
+--- giflib-4.1.6/util/gifrotat.c	2005-10-10 09:22:23.000000000 +0300
++++ giflib-4.1.6-notimestamps//util/gifrotat.c	2012-08-15 14:22:27.291725504 +0300
+@@ -63,7 +63,7 @@
+ 	PROGRAM_NAME
+ 	GIF_LIB_VERSION
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =
+diff -ruN giflib-4.1.6/util/gifrsize.c giflib-4.1.6-notimestamps//util/gifrsize.c
+--- giflib-4.1.6/util/gifrsize.c	2005-10-10 09:22:23.000000000 +0300
++++ giflib-4.1.6-notimestamps//util/gifrsize.c	2012-08-15 14:22:27.291725504 +0300
+@@ -57,7 +57,7 @@
+ 	PROGRAM_NAME
+ 	GIF_LIB_VERSION
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =
+diff -ruN giflib-4.1.6/util/giftext.c giflib-4.1.6-notimestamps//util/giftext.c
+--- giflib-4.1.6/util/giftext.c	2007-11-10 06:28:56.000000000 +0200
++++ giflib-4.1.6-notimestamps//util/giftext.c	2012-08-15 14:22:27.291725504 +0300
+@@ -61,7 +61,7 @@
+ 	PROGRAM_NAME
+ 	GIF_LIB_VERSION
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =
+diff -ruN giflib-4.1.6/util/gifwedge.c giflib-4.1.6-notimestamps//util/gifwedge.c
+--- giflib-4.1.6/util/gifwedge.c	2005-10-10 09:22:23.000000000 +0300
++++ giflib-4.1.6-notimestamps//util/gifwedge.c	2012-08-15 14:22:27.287723504 +0300
+@@ -58,7 +58,7 @@
+ 	PROGRAM_NAME
+ 	GIF_LIB_VERSION
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =
+diff -ruN giflib-4.1.6/util/icon2gif.c giflib-4.1.6-notimestamps//util/icon2gif.c
+--- giflib-4.1.6/util/icon2gif.c	2005-10-10 09:22:22.000000000 +0300
++++ giflib-4.1.6-notimestamps//util/icon2gif.c	2012-08-15 14:22:27.287723505 +0300
+@@ -49,7 +49,7 @@
+ 	PROGRAM_NAME
+ 	GIF_LIB_VERSION
+ 	"	Eric Raymond,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1992 Eric Raymond.\n";
+ static char
+     *CtrlStr =
+diff -ruN giflib-4.1.6/util/raw2gif.c giflib-4.1.6-notimestamps//util/raw2gif.c
+--- giflib-4.1.6/util/raw2gif.c	2005-10-10 09:22:22.000000000 +0300
++++ giflib-4.1.6-notimestamps//util/raw2gif.c	2012-08-15 14:22:27.287723505 +0300
+@@ -59,7 +59,7 @@
+ 	PROGRAM_NAME
+ 	GIF_LIB_VERSION
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =
+diff -ruN giflib-4.1.6/util/rgb2gif.c giflib-4.1.6-notimestamps//util/rgb2gif.c
+--- giflib-4.1.6/util/rgb2gif.c	2005-10-10 09:22:23.000000000 +0300
++++ giflib-4.1.6-notimestamps//util/rgb2gif.c	2012-08-15 14:22:27.291725504 +0300
+@@ -59,7 +59,7 @@
+ 	PROGRAM_NAME
+ 	GIF_LIB_VERSION
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =
+diff -ruN giflib-4.1.6/util/rle2gif.c giflib-4.1.6-notimestamps//util/rle2gif.c
+--- giflib-4.1.6/util/rle2gif.c	2005-10-10 09:22:23.000000000 +0300
++++ giflib-4.1.6-notimestamps//util/rle2gif.c	2012-08-15 14:22:27.291725504 +0300
+@@ -56,7 +56,7 @@
+ 	PROGRAM_NAME
+ 	GIF_LIB_VERSION
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =
+diff -ruN giflib-4.1.6/util/text2gif.c giflib-4.1.6-notimestamps//util/text2gif.c
+--- giflib-4.1.6/util/text2gif.c	2005-10-10 09:22:23.000000000 +0300
++++ giflib-4.1.6-notimestamps//util/text2gif.c	2012-08-15 14:22:27.243701503 +0300
+@@ -64,7 +64,7 @@
+ 	PROGRAM_NAME
+ 	GIF_LIB_VERSION
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =

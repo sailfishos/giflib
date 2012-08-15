@@ -1,3 +1,6 @@
+* Wed Aug 15 2012 Tero Siironen <tero.siironen@gmail.com> - 4.1.6
+- Fixes MER#142 : giflib contains a timestamp
+
 * Thu May 06 2010 Anas Nashif <anas.nashif@intel.com> - 4.1.6
 - Fixed rpmlint errors
 

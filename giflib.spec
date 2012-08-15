@@ -5,6 +5,7 @@ Release: 9
 License: MIT
 URL: http://sourceforge.net/projects/giflib/
 Source0: http://downloads.sourceforge.net/giflib/giflib-%{version}.tar.bz2
+Patch0: giflib-4.1.6-notimestamp.patch
 Group: System/Libraries
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires: libX11-devel, libICE-devel, libSM-devel, libXt-devel
@@ -54,6 +55,9 @@ You'll also need to install the giflib package.
 %prep
 %setup -q
 %{__sed} -i 's/\r//' doc/lzgif.txt
+
+# giflib-4.1.6-notimestamp.patch
+%patch0 -p1
 
 %build
 %configure
