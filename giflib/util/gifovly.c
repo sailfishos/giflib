@@ -25,7 +25,7 @@ static char
 	PROGRAM_NAME
 	VERSION_COOKIE
 	"	Eric Raymond,	"
-	__DATE__ ",   " __TIME__ "\n"
+	"built in OBS, see rpm -q --info packagename for more information\n"
 	"(C) Copyright 1992 Eric Raymond.\n";
 static char
     *CtrlStr =

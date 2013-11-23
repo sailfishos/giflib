@@ -37,7 +37,7 @@ static char
 	PROGRAM_NAME
 	VERSION_COOKIE
 	"	Martin Edlman,	"
-	__DATE__ ",   " __TIME__ "\n"
+	"built in OBS, see rpm -q --info packagename for more information\n"
 	"(C) Copyright 1999 Martin Edlman.\n";
 static char
     *CtrlStr =

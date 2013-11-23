@@ -5,9 +5,7 @@ Release: 1
 License: MIT
 URL: http://sourceforge.net/projects/giflib/
 Source0: http://downloads.sourceforge.net/giflib/giflib-%{version}.tar.bz2
-Patch0: giflib-4.1.6-notimestamp.patch
 Group: System/Libraries
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 Obsoletes: libungif <= %{version}-%{release}
 Provides: libungif <= %{version}-%{release}
@@ -55,12 +53,10 @@ You'll also need to install the giflib package.
 %setup -q -n %{name}-%{version}/%{name}
 %{__sed} -i 's/\r//' doc/lzgif.txt
 
-# giflib-4.1.6-notimestamp.patch
-%patch0 -p1
-
 %build
 %configure
-make %{?_smp_mflags} all
+cd lib ; make %{?_smp_mflags} ; cd ..
+cd util ; make %{?_smp_mflags} ; cd ..
 
 MAJOR=`echo '%{version}' | sed 's/\([0-9]\+\)\..*/\1/'`
 %{__cc} $RPM_OPT_FLAGS -shared -Wl,-soname,libungif.so.$MAJOR -Llib/.libs -lgif -o libungif.so.%{version}
@@ -84,7 +80,7 @@ rm -rf ${RPM_BUILD_ROOT}
 
 %files 
 %defattr(-,root,root,-)
-%doc COPYING README NEWS ONEWS
+%doc COPYING README NEWS
 %{_libdir}/lib*.so.*
 
 %files devel
