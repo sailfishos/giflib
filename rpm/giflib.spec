@@ -49,6 +49,14 @@ GIF format image files.
 Install this package if you need to manipulate GIF format image files.
 You'll also need to install the giflib package.
 
+%package doc
+Summary:   Documentation for %{name}
+Group:     Documentation
+Requires:  %{name} = %{version}-%{release}
+
+%description doc
+%{summary}.
+
 %prep
 %setup -q -n %{name}-%{version}/%{name}
 %{__sed} -i 's/\r//' doc/lzgif.txt
@@ -70,6 +78,8 @@ install -m 0755 -p libungif.so.%{version} $RPM_BUILD_ROOT%{_libdir}
 ln -sf libungif.so.%{version} ${RPM_BUILD_ROOT}%{_libdir}/libungif.so.4
 ln -sf libungif.so.4 ${RPM_BUILD_ROOT}%{_libdir}/libungif.so
 
+mkdir -p %{buildroot}%{_docdir}/%{name}-%{version}
+install -m0644 -t %{buildroot}%{_docdir}/%{name}-%{version} README NEWS
 
 %clean
 rm -rf ${RPM_BUILD_ROOT}
@@ -80,12 +90,11 @@ rm -rf ${RPM_BUILD_ROOT}
 
 %files 
 %defattr(-,root,root,-)
-%doc COPYING README NEWS
+%license COPYING
 %{_libdir}/lib*.so.*
 
 %files devel
 %defattr(-,root,root,-)
-%doc  util/giffiltr.c util/gifspnge.c
 %{_libdir}/lib*.so
 %{_includedir}/*.h
 
@@ -93,3 +102,6 @@ rm -rf ${RPM_BUILD_ROOT}
 %defattr(-,root,root,-)
 %{_bindir}/*
 
+%files doc
+%defattr(-,root,root,-)
+%{_docdir}/%{name}-%{version}
