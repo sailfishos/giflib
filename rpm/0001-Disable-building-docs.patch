@@ -1,0 +1,33 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Pekka Vuorela <pekka.vuorela@jolla.com>
+Date: Tue, 1 Feb 2022 15:33:27 +0200
+Subject: [PATCH] Disable building docs
+
+---
+ Makefile | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index b2bf6de..299a38f 100644
+--- a/Makefile
++++ b/Makefile
+@@ -62,7 +62,6 @@ UTILS = $(INSTALLABLE) \
+ LDLIBS=libgif.a -lm
+ 
+ all: libgif.so libgif.a libutil.so libutil.a $(UTILS)
+-	$(MAKE) -C doc
+ 
+ $(UTILS):: libgif.a libutil.a
+ 
+@@ -89,7 +88,7 @@ check: all
+ 
+ # Installation/uninstallation
+ 
+-install: all install-bin install-include install-lib install-man
++install: all install-bin install-include install-lib
+ install-bin: $(INSTALLABLE)
+ 	$(INSTALL) -d "$(DESTDIR)$(BINDIR)"
+ 	$(INSTALL) $^ "$(DESTDIR)$(BINDIR)"
+-- 
+2.34.1
+

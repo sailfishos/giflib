@@ -1,0 +1,165 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Pekka Vuorela <pekka.vuorela@jolla.com>
+Date: Tue, 1 Feb 2022 16:00:14 +0200
+Subject: [PATCH] Avoid timestamps
+
+---
+ gif2rgb.c  | 2 +-
+ gifbg.c    | 2 +-
+ gifbuild.c | 2 +-
+ gifclrmp.c | 2 +-
+ gifcolor.c | 2 +-
+ gifecho.c  | 2 +-
+ giffix.c   | 2 +-
+ gifhisto.c | 2 +-
+ gifinto.c  | 2 +-
+ giftext.c  | 2 +-
+ gifwedge.c | 2 +-
+ 11 files changed, 11 insertions(+), 11 deletions(-)
+
+diff --git a/gif2rgb.c b/gif2rgb.c
+index 8d7c0ff..2acae73 100644
+--- a/gif2rgb.c
++++ b/gif2rgb.c
+@@ -43,7 +43,7 @@ static char
+ 	PROGRAM_NAME
+ 	VERSION_COOKIE
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =
+diff --git a/gifbg.c b/gifbg.c
+index 98fe6bd..3cec4b5 100644
+--- a/gifbg.c
++++ b/gifbg.c
+@@ -46,7 +46,7 @@ static char
+ 	PROGRAM_NAME
+ 	VERSION_COOKIE
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =
+diff --git a/gifbuild.c b/gifbuild.c
+index d2c9c66..552bd86 100644
+--- a/gifbuild.c
++++ b/gifbuild.c
+@@ -23,7 +23,7 @@ static char
+ 	PROGRAM_NAME
+ 	VERSION_COOKIE
+ 	"	Eric Raymond,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1992 Eric Raymond.\n";
+ static char
+     *CtrlStr =
+diff --git a/gifclrmp.c b/gifclrmp.c
+index ffab0c9..b4deccb 100644
+--- a/gifclrmp.c
++++ b/gifclrmp.c
+@@ -24,7 +24,7 @@ static char
+ 	PROGRAM_NAME
+ 	VERSION_COOKIE
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =
+diff --git a/gifcolor.c b/gifcolor.c
+index a814d4d..6ea0562 100644
+--- a/gifcolor.c
++++ b/gifcolor.c
+@@ -25,7 +25,7 @@ static char
+ 	PROGRAM_NAME
+ 	VERSION_COOKIE
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr = PROGRAM_NAME " v%- b%-Background!d h%-";
+diff --git a/gifecho.c b/gifecho.c
+index f0518a9..0d82a4d 100644
+--- a/gifecho.c
++++ b/gifecho.c
+@@ -32,7 +32,7 @@ static char
+ 	PROGRAM_NAME
+ 	VERSION_COOKIE
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =
+diff --git a/giffix.c b/giffix.c
+index 8f18afe..d89dabe 100644
+--- a/giffix.c
++++ b/giffix.c
+@@ -22,7 +22,7 @@ static char
+ 	PROGRAM_NAME
+ 	VERSION_COOKIE
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =
+diff --git a/gifhisto.c b/gifhisto.c
+index 7740894..d4bfff0 100644
+--- a/gifhisto.c
++++ b/gifhisto.c
+@@ -26,7 +26,7 @@ static char
+ 	PROGRAM_NAME
+ 	VERSION_COOKIE
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =
+diff --git a/gifinto.c b/gifinto.c
+index 35faaf9..a6314f7 100644
+--- a/gifinto.c
++++ b/gifinto.c
+@@ -35,7 +35,7 @@ static char
+ 	PROGRAM_NAME
+ 	VERSION_COOKIE
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =
+diff --git a/giftext.c b/giftext.c
+index 1360d47..7eeca42 100644
+--- a/giftext.c
++++ b/giftext.c
+@@ -28,7 +28,7 @@ static char
+ 	PROGRAM_NAME
+ 	VERSION_COOKIE
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =
+diff --git a/gifwedge.c b/gifwedge.c
+index 8d7f0a8..8ae323d 100644
+--- a/gifwedge.c
++++ b/gifwedge.c
+@@ -27,7 +27,7 @@ static char
+ 	PROGRAM_NAME
+ 	VERSION_COOKIE
+ 	"	Gershon Elber,	"
+-	__DATE__ ",   " __TIME__ "\n"
++	"built in OBS, see rpm -q --info packagename for more information\n"
+ 	"(C) Copyright 1989 Gershon Elber.\n";
+ static char
+     *CtrlStr =
+-- 
+2.34.1
+
