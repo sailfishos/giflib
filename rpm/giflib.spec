@@ -7,6 +7,7 @@ URL: http://sourceforge.net/projects/giflib/
 Source0: giflib-%{version}.tar.bz2
 Patch1: 0001-Disable-building-docs.patch
 Patch2: 0002-Avoid-timestamps.patch
+Patch3: 0003-CVE-2022-28506.patch
 
 %description
 The giflib package contains a shared library of functions for

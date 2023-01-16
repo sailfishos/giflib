@@ -28,6 +28,3 @@ index b2bf6de..299a38f 100644
  install-bin: $(INSTALLABLE)
  	$(INSTALL) -d "$(DESTDIR)$(BINDIR)"
  	$(INSTALL) $^ "$(DESTDIR)$(BINDIR)"
--- 
-2.34.1
-
