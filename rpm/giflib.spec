@@ -1,13 +1,13 @@
 Summary: Library for manipulating GIF format image files
 Name: giflib
-Version: 5.2.1
+Version: 5.2.2
 Release: 1
 License: MIT
 URL: http://sourceforge.net/projects/giflib/
 Source0: giflib-%{version}.tar.bz2
 Patch1: 0001-Disable-building-docs.patch
 Patch2: 0002-Avoid-timestamps.patch
-Patch3: 0003-CVE-2022-28506.patch
+Patch3: 0003-Clean-up-memory-better-at-end-of-run-CVE-2021-40633.patch
 
 %description
 The giflib package contains a shared library of functions for
