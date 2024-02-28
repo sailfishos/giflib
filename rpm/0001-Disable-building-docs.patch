@@ -4,27 +4,30 @@ Date: Tue, 1 Feb 2022 15:33:27 +0200
 Subject: [PATCH] Disable building docs
 
 ---
- Makefile | 3 +--
- 1 file changed, 1 insertion(+), 2 deletions(-)
+ Makefile | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
 
 diff --git a/Makefile b/Makefile
-index b2bf6de..299a38f 100644
+index 87966a96cd4f7325da09b64348f18079f5a22a25..6842522073f2c8d280d96024d96c3a99070f7580 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -62,7 +62,6 @@ UTILS = $(INSTALLABLE) \
- LDLIBS=libgif.a -lm
+@@ -88,10 +88,6 @@ LIBUTILSOMAJOR	= libutil.$(LIBMAJOR).$(SOEXTENSION)
+ endif
  
- all: libgif.so libgif.a libutil.so libutil.a $(UTILS)
+ all: $(LIBGIFSO) libgif.a $(LIBUTILSO) libutil.a $(UTILS)
+-ifeq ($(UNAME), Darwin)
+-else
 -	$(MAKE) -C doc
+-endif
  
  $(UTILS):: libgif.a libutil.a
  
-@@ -89,7 +88,7 @@ check: all
- 
- # Installation/uninstallation
- 
+@@ -132,7 +128,7 @@ reflow:
+ ifeq ($(UNAME), Darwin)
+ install: all install-bin install-include install-lib
+ else
 -install: all install-bin install-include install-lib install-man
 +install: all install-bin install-include install-lib
+ endif
+ 
  install-bin: $(INSTALLABLE)
- 	$(INSTALL) -d "$(DESTDIR)$(BINDIR)"
- 	$(INSTALL) $^ "$(DESTDIR)$(BINDIR)"

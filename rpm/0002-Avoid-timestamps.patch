@@ -18,145 +18,145 @@ Subject: [PATCH] Avoid timestamps
  11 files changed, 11 insertions(+), 11 deletions(-)
 
 diff --git a/gif2rgb.c b/gif2rgb.c
-index 8d7c0ff..2acae73 100644
+index d51226d65d3df38c94daa7e34f4f3b69658f1fdb..7d41d11aaf42c352b844be7bc8b3687fe1bbb5b2 100644
 --- a/gif2rgb.c
 +++ b/gif2rgb.c
-@@ -43,7 +43,7 @@ static char
- 	PROGRAM_NAME
- 	VERSION_COOKIE
- 	"	Gershon Elber,	"
--	__DATE__ ",   " __TIME__ "\n"
-+	"built in OBS, see rpm -q --info packagename for more information\n"
- 	"(C) Copyright 1989 Gershon Elber.\n";
- static char
-     *CtrlStr =
+@@ -40,7 +40,7 @@ with our utilities mainly interesting as test tools.
+ #define PROGRAM_NAME "gif2rgb"
+ 
+ static char *VersionStr = PROGRAM_NAME VERSION_COOKIE
+-    "	Gershon Elber,	" __DATE__ ",   " __TIME__ "\n"
++    "	Gershon Elber,	built in OBS, see rpm -q --info packagename for more information\n"
+     "(C) Copyright 1989 Gershon Elber.\n";
+ static char *CtrlStr = PROGRAM_NAME
+     " v%- c%-#Colors!d s%-Width|Height!d!d 1%- o%-OutFileName!s h%- GifFile!*s";
 diff --git a/gifbg.c b/gifbg.c
-index 98fe6bd..3cec4b5 100644
+index 698678cc0093d7566ed96c0146d7d32e5455c876..ce6a9b9165026916864b3e7dc2d1e561ec94d628 100644
 --- a/gifbg.c
 +++ b/gifbg.c
-@@ -46,7 +46,7 @@ static char
- 	PROGRAM_NAME
- 	VERSION_COOKIE
- 	"	Gershon Elber,	"
--	__DATE__ ",   " __TIME__ "\n"
-+	"built in OBS, see rpm -q --info packagename for more information\n"
- 	"(C) Copyright 1989 Gershon Elber.\n";
- static char
-     *CtrlStr =
+@@ -42,7 +42,7 @@ SPDX-License-Identifier: MIT
+ #define DEFAULT_DIR "T" /* TOP (North) direction. */
+ 
+ static char *VersionStr = PROGRAM_NAME VERSION_COOKIE
+-    "	Gershon Elber,	" __DATE__ ",   " __TIME__ "\n"
++    "	Gershon Elber,	built in OBS, see rpm -q --info packagename for more information\n"
+     "(C) Copyright 1989 Gershon Elber.\n";
+ static char *CtrlStr = PROGRAM_NAME " v%- d%-Dir!s l%-#Lvls!d c%-R|G|B!d!d!d "
+                                     "m%-MinI!d M%-MaxI!d s%-W|H!d!d h%-";
 diff --git a/gifbuild.c b/gifbuild.c
-index d2c9c66..552bd86 100644
+index e8b9b0c7191eb657f0fa20a20b786186020e5194..e296bf6c571fd9a95b6b20b9e0da444cf1552c81 100644
 --- a/gifbuild.c
 +++ b/gifbuild.c
-@@ -23,7 +23,7 @@ static char
- 	PROGRAM_NAME
- 	VERSION_COOKIE
- 	"	Eric Raymond,	"
--	__DATE__ ",   " __TIME__ "\n"
-+	"built in OBS, see rpm -q --info packagename for more information\n"
- 	"(C) Copyright 1992 Eric Raymond.\n";
- static char
-     *CtrlStr =
+@@ -18,7 +18,7 @@ SPDX-License-Identifier: MIT
+ #define PROGRAM_NAME "gifbuild"
+ 
+ static char *VersionStr = PROGRAM_NAME VERSION_COOKIE
+-    "	Eric Raymond,	" __DATE__ ",   " __TIME__ "\n"
++    "	Eric Raymond,	built in OBS, see rpm -q --info packagename for more information\n"
+     "(C) Copyright 1992 Eric Raymond.\n";
+ static char *CtrlStr =
+     PROGRAM_NAME " v%- d%- t%-Characters!s h%- GifFile(s)!*s";
 diff --git a/gifclrmp.c b/gifclrmp.c
-index ffab0c9..b4deccb 100644
+index 2ddcb72e18fdf4aba433eae7dc8be3692062b170..fb647ce6094f43a62d8cac76dd082b23faff244c 100644
 --- a/gifclrmp.c
 +++ b/gifclrmp.c
-@@ -24,7 +24,7 @@ static char
- 	PROGRAM_NAME
- 	VERSION_COOKIE
- 	"	Gershon Elber,	"
--	__DATE__ ",   " __TIME__ "\n"
-+	"built in OBS, see rpm -q --info packagename for more information\n"
- 	"(C) Copyright 1989 Gershon Elber.\n";
- static char
-     *CtrlStr =
+@@ -20,7 +20,7 @@ SPDX-License-Identifier: MIT
+ #define PROGRAM_NAME "gifclrmp"
+ 
+ static char *VersionStr = PROGRAM_NAME VERSION_COOKIE
+-    "	Gershon Elber,	" __DATE__ ",   " __TIME__ "\n"
++    "	Gershon Elber,	built in OBS, see rpm -q --info packagename for more information\n"
+     "(C) Copyright 1989 Gershon Elber.\n";
+ static char *CtrlStr =
+     PROGRAM_NAME " v%- s%- t%-TranslationFile!s l%-ColorMapFile!s g%-Gamma!F "
 diff --git a/gifcolor.c b/gifcolor.c
-index a814d4d..6ea0562 100644
+index 017f5540bebab7d6eecb2247107b34b6a3d73ab1..a857d7f285f20db57f21bc44a2ed436ecef950e5 100644
 --- a/gifcolor.c
 +++ b/gifcolor.c
-@@ -25,7 +25,7 @@ static char
- 	PROGRAM_NAME
- 	VERSION_COOKIE
- 	"	Gershon Elber,	"
--	__DATE__ ",   " __TIME__ "\n"
-+	"built in OBS, see rpm -q --info packagename for more information\n"
- 	"(C) Copyright 1989 Gershon Elber.\n";
- static char
-     *CtrlStr = PROGRAM_NAME " v%- b%-Background!d h%-";
+@@ -21,7 +21,7 @@ SPDX-License-Identifier: MIT
+ #define IMAGEWIDTH LINE_LEN *GIF_FONT_WIDTH
+ 
+ static char *VersionStr = PROGRAM_NAME VERSION_COOKIE
+-    "	Gershon Elber,	" __DATE__ ",   " __TIME__ "\n"
++    "	Gershon Elber,	built in OBS, see rpm -q --info packagename for more information\n"
+     "(C) Copyright 1989 Gershon Elber.\n";
+ static char *CtrlStr = PROGRAM_NAME " v%- b%-Background!d h%-";
+ 
 diff --git a/gifecho.c b/gifecho.c
-index f0518a9..0d82a4d 100644
+index 8eb005eb1b0f9138eb512c3678c9b990ff3f5571..1002d4db7e1fafb3c5e30176fe05fafa00e9827e 100644
 --- a/gifecho.c
 +++ b/gifecho.c
-@@ -32,7 +32,7 @@ static char
- 	PROGRAM_NAME
- 	VERSION_COOKIE
- 	"	Gershon Elber,	"
--	__DATE__ ",   " __TIME__ "\n"
-+	"built in OBS, see rpm -q --info packagename for more information\n"
- 	"(C) Copyright 1989 Gershon Elber.\n";
- static char
-     *CtrlStr =
+@@ -28,7 +28,7 @@ SPDX-License-Identifier: MIT
+ #define DEFAULT_COLOR_BLUE 255
+ 
+ static char *VersionStr = PROGRAM_NAME VERSION_COOKIE
+-    "	Gershon Elber,	" __DATE__ ",   " __TIME__ "\n"
++    "	Gershon Elber,	built in OBS, see rpm -q --info packagename for more information\n"
+     "(C) Copyright 1989 Gershon Elber.\n";
+ static char *CtrlStr = PROGRAM_NAME
+     " v%- s%-ClrMapSize!d f%-FGClr!d c%-R|G|B!d!d!d t%-\"Text\"!s h%-";
 diff --git a/giffix.c b/giffix.c
-index 8f18afe..d89dabe 100644
+index e7a79a801425cd2943737ce331770f9ca8200082..a9d9b87461328bebfaa0fafd1a4836b3b8fe1c02 100644
 --- a/giffix.c
 +++ b/giffix.c
-@@ -22,7 +22,7 @@ static char
- 	PROGRAM_NAME
- 	VERSION_COOKIE
- 	"	Gershon Elber,	"
--	__DATE__ ",   " __TIME__ "\n"
-+	"built in OBS, see rpm -q --info packagename for more information\n"
- 	"(C) Copyright 1989 Gershon Elber.\n";
- static char
-     *CtrlStr =
+@@ -18,7 +18,7 @@ SPDX-License-Identifier: MIT
+ #define PROGRAM_NAME "giffix"
+ 
+ static char *VersionStr = PROGRAM_NAME VERSION_COOKIE
+-    "	Gershon Elber,	" __DATE__ ",   " __TIME__ "\n"
++    "	Gershon Elber,	built in OBS, see rpm -q --info packagename for more information\n"
+     "(C) Copyright 1989 Gershon Elber.\n";
+ static char *CtrlStr = PROGRAM_NAME " v%- h%- GifFile!*s";
+ 
 diff --git a/gifhisto.c b/gifhisto.c
-index 7740894..d4bfff0 100644
+index fb79ea02ec65d7d0b150c7fb2b74b95428a885a8..48cea516e85f04dfad783327e0aa5bb8020a92cb 100644
 --- a/gifhisto.c
 +++ b/gifhisto.c
-@@ -26,7 +26,7 @@ static char
- 	PROGRAM_NAME
- 	VERSION_COOKIE
- 	"	Gershon Elber,	"
--	__DATE__ ",   " __TIME__ "\n"
-+	"built in OBS, see rpm -q --info packagename for more information\n"
- 	"(C) Copyright 1989 Gershon Elber.\n";
- static char
-     *CtrlStr =
+@@ -22,7 +22,7 @@ SPDX-License-Identifier: MIT
+ #define HISTO_BITS_PER_PIXEL 2 /* Size of bitmap for histogram GIF. */
+ 
+ static char *VersionStr = PROGRAM_NAME VERSION_COOKIE
+-    "	Gershon Elber,	" __DATE__ ",   " __TIME__ "\n"
++    "	Gershon Elber,	built in OBS, see rpm -q --info packagename for more information\n"
+     "(C) Copyright 1989 Gershon Elber.\n";
+ static char *CtrlStr = PROGRAM_NAME
+     " v%- t%- s%-Width|Height!d!d n%-ImageNumber!d b%- h%- GifFile!*s";
 diff --git a/gifinto.c b/gifinto.c
-index 35faaf9..a6314f7 100644
+index 07c85d311de8bc0aa2bae46962269d3efa7fbf96..6b2dd0eccd02871d5b563ade146d3f2381720af8 100644
 --- a/gifinto.c
 +++ b/gifinto.c
-@@ -35,7 +35,7 @@ static char
- 	PROGRAM_NAME
- 	VERSION_COOKIE
- 	"	Gershon Elber,	"
--	__DATE__ ",   " __TIME__ "\n"
-+	"built in OBS, see rpm -q --info packagename for more information\n"
- 	"(C) Copyright 1989 Gershon Elber.\n";
- static char
-     *CtrlStr =
+@@ -31,7 +31,7 @@ SPDX-License-Identifier: MIT
+ #define DEFAULT_TMP_NAME "TempInto.XXXXXX"
+ 
+ static char *VersionStr = PROGRAM_NAME VERSION_COOKIE
+-    "	Gershon Elber,	" __DATE__ ",   " __TIME__ "\n"
++    "	Gershon Elber,	built in OBS, see rpm -q --info packagename for more information\n"
+     "(C) Copyright 1989 Gershon Elber.\n";
+ static char *CtrlStr = PROGRAM_NAME " v%- s%-MinFileSize!d h%- GifFile!*s";
+ 
 diff --git a/giftext.c b/giftext.c
-index 1360d47..7eeca42 100644
+index f085ed68d4e9ed51615211c908329cdd936b2d1c..7f6c6db38da7a41371cf15a7f983904f5d87d02f 100644
 --- a/giftext.c
 +++ b/giftext.c
-@@ -28,7 +28,7 @@ static char
- 	PROGRAM_NAME
- 	VERSION_COOKIE
- 	"	Gershon Elber,	"
--	__DATE__ ",   " __TIME__ "\n"
-+	"built in OBS, see rpm -q --info packagename for more information\n"
- 	"(C) Copyright 1989 Gershon Elber.\n";
- static char
-     *CtrlStr =
+@@ -24,7 +24,7 @@ SPDX-License-Identifier: MIT
+ #define MAKE_PRINTABLE(c) (isprint(c) ? (c) : ' ')
+ 
+ static char *VersionStr = PROGRAM_NAME VERSION_COOKIE
+-    "	Gershon Elber,	" __DATE__ ",   " __TIME__ "\n"
++    "	Gershon Elber,	built in OBS, see rpm -q --info packagename for more information\n"
+     "(C) Copyright 1989 Gershon Elber.\n";
+ static char *CtrlStr = PROGRAM_NAME " v%- c%- e%- z%- p%- r%- h%- GifFile!*s";
+ 
 diff --git a/gifwedge.c b/gifwedge.c
-index 8d7f0a8..8ae323d 100644
+index 203d5daba184f4aefb8404ecf710ca3ce0740712..44db7f9d97b3da707254c3190f899c18eeafb505 100644
 --- a/gifwedge.c
 +++ b/gifwedge.c
-@@ -27,7 +27,7 @@ static char
- 	PROGRAM_NAME
- 	VERSION_COOKIE
- 	"	Gershon Elber,	"
--	__DATE__ ",   " __TIME__ "\n"
-+	"built in OBS, see rpm -q --info packagename for more information\n"
- 	"(C) Copyright 1989 Gershon Elber.\n";
- static char
-     *CtrlStr =
+@@ -23,7 +23,7 @@ SPDX-License-Identifier: MIT
+ #define DEFAULT_NUM_LEVELS 16 /* Number of colors to gen the image. */
+ 
+ static char *VersionStr = PROGRAM_NAME VERSION_COOKIE
+-    "	Gershon Elber,	" __DATE__ ",   " __TIME__ "\n"
++    "	Gershon Elber,	built in OBS, see rpm -q --info packagename for more information\n"
+     "(C) Copyright 1989 Gershon Elber.\n";
+ static char *CtrlStr = PROGRAM_NAME " v%- l%-#Lvls!d s%-Width|Height!d!d h%-";
+ 
