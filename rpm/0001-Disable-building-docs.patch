@@ -8,25 +8,25 @@ Subject: [PATCH] Disable building docs
  1 file changed, 1 insertion(+), 5 deletions(-)
 
 diff --git a/Makefile b/Makefile
-index 87966a96cd4f7325da09b64348f18079f5a22a25..6842522073f2c8d280d96024d96c3a99070f7580 100644
+index f347162269cb1fe38ea81f0c6c170bbe67452b00..8edab4c1863d906c9b5910f948d5622c6e144e3a 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -88,10 +88,6 @@ LIBUTILSOMAJOR	= libutil.$(LIBMAJOR).$(SOEXTENSION)
- endif
+@@ -110,10 +110,6 @@ SHARED_LIBS = $(LIBGIFSO) $(LIBUTILSO)
+ STATIC_LIBS = libgif.a libutil.a
  
- all: $(LIBGIFSO) libgif.a $(LIBUTILSO) libutil.a $(UTILS)
+ all: shared-lib static-lib $(UTILS)
 -ifeq ($(UNAME), Darwin)
 -else
 -	$(MAKE) -C doc
 -endif
  
- $(UTILS):: libgif.a libutil.a
+ $(UTILS):: $(STATIC_LIBS)
  
-@@ -132,7 +128,7 @@ reflow:
+@@ -169,7 +165,7 @@ spellcheck:
  ifeq ($(UNAME), Darwin)
  install: all install-bin install-include install-lib
  else
--install: all install-bin install-include install-lib install-man
+-install: all install-bin install-include install-lib install-man install-doc
 +install: all install-bin install-include install-lib
  endif
  
