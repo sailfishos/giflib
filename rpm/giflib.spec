@@ -1,13 +1,13 @@
 Summary: Library for manipulating GIF format image files
 Name: giflib
-Version: 5.2.2
+Version: 6.1.3
 Release: 1
 License: MIT
-URL: http://sourceforge.net/projects/giflib/
+URL: https://github.com/sailfishos/giflib
 Source0: giflib-%{version}.tar.bz2
 Patch1: 0001-Disable-building-docs.patch
 Patch2: 0002-Avoid-timestamps.patch
-Patch3: 0003-Clean-up-memory-better-at-end-of-run-CVE-2021-40633.patch
+Patch3: 0003-Fix-CVE-2026-26740-heap-OOB-write-in-EGifGCBToSavedE.patch
 
 %description
 The giflib package contains a shared library of functions for
@@ -46,16 +46,13 @@ rm -f %{buildroot}%{_libdir}/libgif.a
 
 %postun -p /sbin/ldconfig
 
-%files 
-%defattr(-,root,root,-)
+%files
 %license COPYING
 %{_libdir}/libgif.so.*
 
 %files devel
-%defattr(-,root,root,-)
 %{_libdir}/libgif.so
 %{_includedir}/*.h
 
 %files utils
-%defattr(-,root,root,-)
 %{_bindir}/*

@@ -18,145 +18,145 @@ Subject: [PATCH] Avoid timestamps
  11 files changed, 11 insertions(+), 11 deletions(-)
 
 diff --git a/gif2rgb.c b/gif2rgb.c
-index d51226d65d3df38c94daa7e34f4f3b69658f1fdb..7d41d11aaf42c352b844be7bc8b3687fe1bbb5b2 100644
+index 0300ba833a0cabe715243de3b8bf80675bf18960..8c8ddb7e85d520779b8333a8b3ddbe0f6f4f3873 100644
 --- a/gif2rgb.c
 +++ b/gif2rgb.c
-@@ -40,7 +40,7 @@ with our utilities mainly interesting as test tools.
+@@ -39,7 +39,7 @@ with our utilities mainly interesting as test tools.
+ 
  #define PROGRAM_NAME "gif2rgb"
  
- static char *VersionStr = PROGRAM_NAME VERSION_COOKIE
--    "	Gershon Elber,	" __DATE__ ",   " __TIME__ "\n"
-+    "	Gershon Elber,	built in OBS, see rpm -q --info packagename for more information\n"
-     "(C) Copyright 1989 Gershon Elber.\n";
+-static char *VerStr = PROGRAM_NAME VERSION_COOKIE __DATE__ ", " __TIME__ "\n";
++static char *VerStr = PROGRAM_NAME VERSION_COOKIE "built in OBS, see rpm -q --info packagename for more information\n";
  static char *CtrlStr = PROGRAM_NAME
      " v%- c%-#Colors!d s%-Width|Height!d!d 1%- o%-OutFileName!s h%- GifFile!*s";
+ 
 diff --git a/gifbg.c b/gifbg.c
-index 698678cc0093d7566ed96c0146d7d32e5455c876..ce6a9b9165026916864b3e7dc2d1e561ec94d628 100644
+index c654e4e7ccd84b2c9e7b9f3e99e15f64338fa641..b3b49a2688d1bbd1e6b63ff5eb9518cb1d629e37 100644
 --- a/gifbg.c
 +++ b/gifbg.c
-@@ -42,7 +42,7 @@ SPDX-License-Identifier: MIT
+@@ -42,7 +42,7 @@ gifbg - generate a test-pattern GIF
+ 
  #define DEFAULT_DIR "T" /* TOP (North) direction. */
  
- static char *VersionStr = PROGRAM_NAME VERSION_COOKIE
--    "	Gershon Elber,	" __DATE__ ",   " __TIME__ "\n"
-+    "	Gershon Elber,	built in OBS, see rpm -q --info packagename for more information\n"
-     "(C) Copyright 1989 Gershon Elber.\n";
+-static char *VerStr = PROGRAM_NAME VERSION_COOKIE __DATE__ ", " __TIME__ "\n";
++static char *VerStr = PROGRAM_NAME VERSION_COOKIE "built in OBS, see rpm -q --info packagename for more information\n";
  static char *CtrlStr = PROGRAM_NAME " v%- d%-Dir!s l%-#Lvls!d c%-R|G|B!d!d!d "
                                      "m%-MinI!d M%-MaxI!d s%-W|H!d!d h%-";
+ 
 diff --git a/gifbuild.c b/gifbuild.c
-index e8b9b0c7191eb657f0fa20a20b786186020e5194..e296bf6c571fd9a95b6b20b9e0da444cf1552c81 100644
+index cf8a37c53e25254517af33f699094d93cecde47a..b3697ce5967eb0d4ca62468a0eb2c437c4a0499e 100644
 --- a/gifbuild.c
 +++ b/gifbuild.c
-@@ -18,7 +18,7 @@ SPDX-License-Identifier: MIT
+@@ -19,7 +19,7 @@ gifbuild - dump GIF data in a textual format, or undump it to a GIF
+ 
  #define PROGRAM_NAME "gifbuild"
  
- static char *VersionStr = PROGRAM_NAME VERSION_COOKIE
--    "	Eric Raymond,	" __DATE__ ",   " __TIME__ "\n"
-+    "	Eric Raymond,	built in OBS, see rpm -q --info packagename for more information\n"
-     "(C) Copyright 1992 Eric Raymond.\n";
+-static char *VerStr = PROGRAM_NAME VERSION_COOKIE __DATE__ ", " __TIME__ "\n";
++static char *VerStr = PROGRAM_NAME VERSION_COOKIE "built in OBS, see rpm -q --info packagename for more information\n";
  static char *CtrlStr =
      PROGRAM_NAME " v%- d%- t%-Characters!s h%- GifFile(s)!*s";
+ 
 diff --git a/gifclrmp.c b/gifclrmp.c
-index 2ddcb72e18fdf4aba433eae7dc8be3692062b170..fb647ce6094f43a62d8cac76dd082b23faff244c 100644
+index 0f9b470a9b3535bbfcca2131c4ba86492ab77701..de5a74117804f7ed121ac56cf81073dc4a94c6a9 100644
 --- a/gifclrmp.c
 +++ b/gifclrmp.c
-@@ -20,7 +20,7 @@ SPDX-License-Identifier: MIT
+@@ -19,7 +19,7 @@ gifclrmap - extract colormaps from GIF images
+ 
  #define PROGRAM_NAME "gifclrmp"
  
- static char *VersionStr = PROGRAM_NAME VERSION_COOKIE
--    "	Gershon Elber,	" __DATE__ ",   " __TIME__ "\n"
-+    "	Gershon Elber,	built in OBS, see rpm -q --info packagename for more information\n"
-     "(C) Copyright 1989 Gershon Elber.\n";
+-static char *VerStr = PROGRAM_NAME VERSION_COOKIE __DATE__ ", " __TIME__ "\n";
++static char *VerStr = PROGRAM_NAME VERSION_COOKIE "built in OBS, see rpm -q --info packagename for more information\n";
  static char *CtrlStr =
      PROGRAM_NAME " v%- s%- t%-TranslationFile!s l%-ColorMapFile!s g%-Gamma!F "
+                  "i%-Image#!d h%- GifFile!*s";
 diff --git a/gifcolor.c b/gifcolor.c
-index 017f5540bebab7d6eecb2247107b34b6a3d73ab1..a857d7f285f20db57f21bc44a2ed436ecef950e5 100644
+index e9245cbbfcbf2361681266131fddf502f1a7de9e..8ad70353f1a6af2155fb99fa3d88ac01e0bd48bb 100644
 --- a/gifcolor.c
 +++ b/gifcolor.c
-@@ -21,7 +21,7 @@ SPDX-License-Identifier: MIT
+@@ -20,7 +20,7 @@ gifcolor - generate color test-pattern GIFs
+ #define LINE_LEN 40
  #define IMAGEWIDTH LINE_LEN *GIF_FONT_WIDTH
  
- static char *VersionStr = PROGRAM_NAME VERSION_COOKIE
--    "	Gershon Elber,	" __DATE__ ",   " __TIME__ "\n"
-+    "	Gershon Elber,	built in OBS, see rpm -q --info packagename for more information\n"
-     "(C) Copyright 1989 Gershon Elber.\n";
+-static char *VerStr = PROGRAM_NAME VERSION_COOKIE __DATE__ ", " __TIME__ "\n";
++static char *VerStr = PROGRAM_NAME VERSION_COOKIE "built in OBS, see rpm -q --info packagename for more information\n";
  static char *CtrlStr = PROGRAM_NAME " v%- b%-Background!d h%-";
  
+ static int BackGround = 0;
 diff --git a/gifecho.c b/gifecho.c
-index 8eb005eb1b0f9138eb512c3678c9b990ff3f5571..1002d4db7e1fafb3c5e30176fe05fafa00e9827e 100644
+index f98e98c55ebadb5e0e81141d8efa156e1b92f597..ce4d4e6aa7086b8d14b39bffba662d076fe332ad 100644
 --- a/gifecho.c
 +++ b/gifecho.c
-@@ -28,7 +28,7 @@ SPDX-License-Identifier: MIT
+@@ -27,7 +27,7 @@ gifecho - generate a GIF from ASCII text
+ #define DEFAULT_COLOR_GREEN 255
  #define DEFAULT_COLOR_BLUE 255
  
- static char *VersionStr = PROGRAM_NAME VERSION_COOKIE
--    "	Gershon Elber,	" __DATE__ ",   " __TIME__ "\n"
-+    "	Gershon Elber,	built in OBS, see rpm -q --info packagename for more information\n"
-     "(C) Copyright 1989 Gershon Elber.\n";
+-static char *VerStr = PROGRAM_NAME VERSION_COOKIE __DATE__ ", " __TIME__ "\n";
++static char *VerStr = PROGRAM_NAME VERSION_COOKIE "built in OBS, see rpm -q --info packagename for more information\n";
  static char *CtrlStr = PROGRAM_NAME
      " v%- s%-ClrMapSize!d f%-FGClr!d c%-R|G|B!d!d!d t%-\"Text\"!s h%-";
+ 
 diff --git a/giffix.c b/giffix.c
-index e7a79a801425cd2943737ce331770f9ca8200082..a9d9b87461328bebfaa0fafd1a4836b3b8fe1c02 100644
+index da59ad125c43df7ecfe3eb4137036573267e802a..b014c1a0a91231a280abfaad8ab61cc90b004ace 100644
 --- a/giffix.c
 +++ b/giffix.c
-@@ -18,7 +18,7 @@ SPDX-License-Identifier: MIT
+@@ -17,7 +17,7 @@ giffix - attempt to fix a truncated GIF
+ 
  #define PROGRAM_NAME "giffix"
  
- static char *VersionStr = PROGRAM_NAME VERSION_COOKIE
--    "	Gershon Elber,	" __DATE__ ",   " __TIME__ "\n"
-+    "	Gershon Elber,	built in OBS, see rpm -q --info packagename for more information\n"
-     "(C) Copyright 1989 Gershon Elber.\n";
+-static char *VerStr = PROGRAM_NAME VERSION_COOKIE __DATE__ ", " __TIME__ "\n";
++static char *VerStr = PROGRAM_NAME VERSION_COOKIE "built in OBS, see rpm -q --info packagename for more information\n";
  static char *CtrlStr = PROGRAM_NAME " v%- h%- GifFile!*s";
  
+ static void QuitGifError(GifFileType *GifFileIn, GifFileType *GifFileOut);
 diff --git a/gifhisto.c b/gifhisto.c
-index fb79ea02ec65d7d0b150c7fb2b74b95428a885a8..48cea516e85f04dfad783327e0aa5bb8020a92cb 100644
+index 32e2e5aff865bcd02d21607f8c2fa0b69f16f214..292c92b9f6c23aa89477eff4df74977b11f7444c 100644
 --- a/gifhisto.c
 +++ b/gifhisto.c
-@@ -22,7 +22,7 @@ SPDX-License-Identifier: MIT
+@@ -21,7 +21,7 @@ gifhisto - make a color histogram from image color frequencies
+ #define DEFAULT_HISTO_HEIGHT 256
  #define HISTO_BITS_PER_PIXEL 2 /* Size of bitmap for histogram GIF. */
  
- static char *VersionStr = PROGRAM_NAME VERSION_COOKIE
--    "	Gershon Elber,	" __DATE__ ",   " __TIME__ "\n"
-+    "	Gershon Elber,	built in OBS, see rpm -q --info packagename for more information\n"
-     "(C) Copyright 1989 Gershon Elber.\n";
+-static char *VerStr = PROGRAM_NAME VERSION_COOKIE __DATE__ ", " __TIME__ "\n";
++static char *VerStr = PROGRAM_NAME VERSION_COOKIE "built in OBS, see rpm -q --info packagename for more information\n";
  static char *CtrlStr = PROGRAM_NAME
      " v%- t%- s%-Width|Height!d!d n%-ImageNumber!d b%- h%- GifFile!*s";
+ 
 diff --git a/gifinto.c b/gifinto.c
-index 07c85d311de8bc0aa2bae46962269d3efa7fbf96..6b2dd0eccd02871d5b563ade146d3f2381720af8 100644
+index 88fc4a16165fa25dd13b404245ee71a2ab37427d..6c34a7c3c85e0305ae92318b9653308a36473e97 100644
 --- a/gifinto.c
 +++ b/gifinto.c
-@@ -31,7 +31,7 @@ SPDX-License-Identifier: MIT
+@@ -30,7 +30,7 @@ gifinto - save GIF on stdin to file if size over set threshold
+ #define DEFAULT_OUT_NAME "GifInto.Gif"
  #define DEFAULT_TMP_NAME "TempInto.XXXXXX"
  
- static char *VersionStr = PROGRAM_NAME VERSION_COOKIE
--    "	Gershon Elber,	" __DATE__ ",   " __TIME__ "\n"
-+    "	Gershon Elber,	built in OBS, see rpm -q --info packagename for more information\n"
-     "(C) Copyright 1989 Gershon Elber.\n";
+-static char *VerStr = PROGRAM_NAME VERSION_COOKIE __DATE__ ", " __TIME__ "\n";
++static char *VerStr = PROGRAM_NAME VERSION_COOKIE "built in OBS, see rpm -q --info packagename for more information\n";
  static char *CtrlStr = PROGRAM_NAME " v%- s%-MinFileSize!d h%- GifFile!*s";
  
+ static int MinFileSize = DEFAULT_MIN_FILE_SIZE;
 diff --git a/giftext.c b/giftext.c
-index f085ed68d4e9ed51615211c908329cdd936b2d1c..7f6c6db38da7a41371cf15a7f983904f5d87d02f 100644
+index 2dedf435a97fb93d9b6c57d4618d04fde783deaf..e2f7f0ad75524f53f07b2ee56a501a13a6acf62a 100644
 --- a/giftext.c
 +++ b/giftext.c
-@@ -24,7 +24,7 @@ SPDX-License-Identifier: MIT
+@@ -23,7 +23,7 @@ giftext - dump GIF pixels and metadata as text
+ 
  #define MAKE_PRINTABLE(c) (isprint(c) ? (c) : ' ')
  
- static char *VersionStr = PROGRAM_NAME VERSION_COOKIE
--    "	Gershon Elber,	" __DATE__ ",   " __TIME__ "\n"
-+    "	Gershon Elber,	built in OBS, see rpm -q --info packagename for more information\n"
-     "(C) Copyright 1989 Gershon Elber.\n";
+-static char *VerStr = PROGRAM_NAME VERSION_COOKIE __DATE__ ", " __TIME__ "\n";
++static char *VerStr = PROGRAM_NAME VERSION_COOKIE "built in OBS, see rpm -q --info packagename for more information\n";
  static char *CtrlStr = PROGRAM_NAME " v%- c%- e%- z%- p%- r%- h%- GifFile!*s";
  
+ static void PrintCodeBlock(GifFileType *GifFile, GifByteType *CodeBlock,
 diff --git a/gifwedge.c b/gifwedge.c
-index 203d5daba184f4aefb8404ecf710ca3ce0740712..44db7f9d97b3da707254c3190f899c18eeafb505 100644
+index 82128d5e5c622fc52349329e29546f09f2cff803..a363bdf50d26f287d067f1fb259c19d380234250 100644
 --- a/gifwedge.c
 +++ b/gifwedge.c
-@@ -23,7 +23,7 @@ SPDX-License-Identifier: MIT
+@@ -22,7 +22,7 @@ gifwedge - create a GIF test pattern
+ 
  #define DEFAULT_NUM_LEVELS 16 /* Number of colors to gen the image. */
  
- static char *VersionStr = PROGRAM_NAME VERSION_COOKIE
--    "	Gershon Elber,	" __DATE__ ",   " __TIME__ "\n"
-+    "	Gershon Elber,	built in OBS, see rpm -q --info packagename for more information\n"
-     "(C) Copyright 1989 Gershon Elber.\n";
+-static char *VerStr = PROGRAM_NAME VERSION_COOKIE __DATE__ ", " __TIME__ "\n";
++static char *VerStr = PROGRAM_NAME VERSION_COOKIE "built in OBS, see rpm -q --info packagename for more information\n";
  static char *CtrlStr = PROGRAM_NAME " v%- l%-#Lvls!d s%-Width|Height!d!d h%-";
  
+ static int NumLevels = DEFAULT_NUM_LEVELS, ImageWidth = DEFAULT_WIDTH,
